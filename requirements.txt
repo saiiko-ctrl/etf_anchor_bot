@@ -1,0 +1,4 @@
+discord.py==2.3.2
+yfinance==0.2.41
+pandas==2.2.2
+aiohttp==3.9.5

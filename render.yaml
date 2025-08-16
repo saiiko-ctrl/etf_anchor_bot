@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: etf-anchor-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python etf_bot.py"
+    plan: free
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: SCHEDULE_TIMES
+        value: "08:15,13:00"
+      - key: ALERT_INTERVAL_SEC
+        value: "300"
